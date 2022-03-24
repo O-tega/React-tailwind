@@ -13,10 +13,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start ",
     "tailwinddev": "npx tailwindcss -i tailwind.css -o ./src/index.css --watch",
     "tailwindprod": "npx tailwindcss -i tailwind.css -o ./src/index.css --minify",
-    "build": "react-scripts build",
+    "build": "react-scripts build ",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -39,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "@faker-js/faker": "^6.0.0",
     "tailwindcss": "^3.0.23"
   }
 }
