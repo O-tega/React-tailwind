@@ -1,39 +1,50 @@
-import { react } from "react";
-import CommentDetails from "./components/CommentDetail";
-// import {react-router-dom} from 'react-dom'
+import React from "react";
+import SeasonComponent from "./components/SeasonComponent";
 
-const comments = [
-	{
-		author: "james",
-		time: "6:00pm",
-		info: "Nice blog post!",
-	},
-	{
-		author: "Mary",
-		time: "1:00am",
-		info: "Beautifully written!",
-	},
-	{
-		author: "Andrew",
-		time: "5:00am",
-		info: "What is this!!",
-	},
-];
+// const Season = () => {
 
-const New = () => {
-	return comments.map(
-		({ author, time, info }, index) => {
-			return (
-				<div key={index}>
-					<CommentDetails
-						author={author}
-						time={time}
-						info={info}
-					/>
-				</div>
-			);
-		}
-	);
-};
+// 	window.navigator.geolocation.getCurrentPosition(
+// 		(position)=>{
+// 			console.log(position)
+// 		},
+// 		(err)=>{
+// 			console.log('Error: ', err)
+// 		}
+// 	)
+// 	return <div><SeasonComponent/></div>;
+// };
 
-export default New;
+// Creating a class component
+class Season extends React.Component {
+	constructor() {
+		super();
+
+		this.state = { lat: null, errorMessage: '' };
+
+		console.log(this.state);
+
+		window.navigator.geolocation.getCurrentPosition(
+			(position) =>
+				// this is where we set our state to update the current state
+				this.setState({
+					lat: position.coords.latitude,
+				}),
+			(err) =>
+			// diaplay error message on the broswer
+				this.setState({errorMessage: err.message})
+		);
+	}
+
+	render() {
+		let lat = this.state.lat;
+		let errMessage = this.state.errorMessage;
+
+		return (
+			<div>
+				<SeasonComponent lat={lat} err={errMessage} />
+			</div>
+		);
+	}
+}
+
+export default Season;
