@@ -16,24 +16,17 @@ import SeasonComponent from "./components/SeasonComponent";
 
 // Creating a class component
 class Season extends React.Component {
-	constructor() {
-		super();
 
-		this.state = { lat: null, errorMessage: '' };
+	state = ({lat: null, errorMessage:''}) 
 
-		console.log(this.state);
-
+// Using componentDidMount to update class state
+	componentDidMount() {
 		window.navigator.geolocation.getCurrentPosition(
-			(position) =>
-				// this is where we set our state to update the current state
-				this.setState({
-					lat: position.coords.latitude,
-				}),
-			(err) =>
-			// diaplay error message on the broswer
-				this.setState({errorMessage: err.message})
+			(position) => this.setState({lat: position.coords.latitude,}),
+			(err) => this.setState({errorMessage: err.message})
 		);
 	}
+
 
 	render() {
 		let lat = this.state.lat;
