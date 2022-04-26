@@ -1,12 +1,24 @@
-import React from 'react'
+import React from "react";
+
+class Clock extends React.Component {
 
 
+	state = {time: new Date().toLocaleTimeString()}
 
-class Clock extends React.Component{
-
-	render(){
-		<div>
-		<h1 className="text-2xl">This is a clock program</h1>
-		</div>
+	componentDidMount(){
+		setInterval(()=>{
+			this.setState({time: new Date().toLocaleTimeString()})
+		}, 1000)
+	}
+	render() {
+		return (
+			<div>
+				<h1 className='text-2xl time'>
+					The time is: {this.state.time}
+				</h1>
+			</div>
+		);
 	}
 }
+
+export default Clock;
