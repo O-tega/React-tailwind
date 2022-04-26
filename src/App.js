@@ -1,24 +1,17 @@
 import React from "react";
+import SearchBar from "./components/SearchBarComponent";
 
-class Clock extends React.Component {
-
-
-	state = {time: new Date().toLocaleTimeString()}
-
-	componentDidMount(){
-		setInterval(()=>{
-			this.setState({time: new Date().toLocaleTimeString()})
-		}, 1000)
-	}
+class Pics extends React.Component {
 	render() {
 		return (
 			<div>
-				<h1 className='text-2xl time'>
-					The time is: {this.state.time}
+				<h1 className='text2xl'>
+					This app displays pictures
 				</h1>
+				<SearchBar/>
 			</div>
 		);
 	}
 }
 
-export default Clock;
+export default Pics;

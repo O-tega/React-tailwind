@@ -9,7 +9,7 @@ class SearchBar extends React.Component {
 			<div>
 				<div className='flex justify-center'>
                 <div>
-                </div>
+                </div>kl
 					<form className='w-1/2'>
 						<input
                             value={this.setState.term}
@@ -24,6 +24,7 @@ class SearchBar extends React.Component {
 			</div>
 		);
 	}
+    // new comment
 }
 
 export default SearchBar;
