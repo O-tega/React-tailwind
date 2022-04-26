@@ -466,6 +466,27 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.inset-x-0 {
+  left: 0px;
+  right: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
 .float-right {
   float: right;
 }
@@ -476,6 +497,30 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.ml-52 {
+  margin-left: 13rem;
+}
+
+.ml-48 {
+  margin-left: 12rem;
+}
+
+.ml-36 {
+  margin-left: 9rem;
+}
+
+.ml-14 {
+  margin-left: 3.5rem;
+}
+
+.ml-16 {
+  margin-left: 4rem;
+}
+
+.ml-20 {
+  margin-left: 5rem;
 }
 
 .inline-block {
@@ -490,12 +535,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 3rem;
 }
 
+.h-8 {
+  height: 2rem;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
 .w-9\/12 {
   width: 75%;
 }
 
 .w-12 {
   width: 3rem;
+}
+
+.w-8 {
+  width: 2rem;
 }
 
 @-webkit-keyframes spin {
@@ -533,8 +590,37 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 4px;
 }
 
+.border {
+  border-width: 1px;
+}
+
+.border-8 {
+  border-width: 8px;
+}
+
+.border-solid {
+  border-style: solid;
+}
+
+.border-red-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
+}
+
 .pt-64 {
   padding-top: 16rem;
+}
+
+.pl-52 {
+  padding-left: 13rem;
+}
+
+.pl-3 {
+  padding-left: 0.75rem;
+}
+
+.pl-36 {
+  padding-left: 9rem;
 }
 
 .text-center {
@@ -554,4 +640,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+
+.text-blue-600 {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
 }

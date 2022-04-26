@@ -33,7 +33,7 @@ class Season extends React.Component {
 		let errMessage = this.state.errorMessage;
 
 		return (
-			<div>
+			<div className="border-8 border-red-500">
 				<SeasonComponent lat={lat} err={errMessage} />
 			</div>
 		);
