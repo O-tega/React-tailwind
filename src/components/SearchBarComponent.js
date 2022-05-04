@@ -24,7 +24,7 @@ class SearchBar extends React.Component {
 							onChange={(e)=>this.setState({term:e.target.value})}
 							type='text'
 							placeholder='search'
-							className='appearance-none bg-gray-200 border-gray-200 py-2 px-4 text-gray-700 leading-tight focus:bg-white rounded-lg w-full'
+							className='appearance-none bg-gray-200 py-2 px-4 text-gray-700 leading-tight focus:bg-white border-blue-500 rounded-lg w-full'
 						/>
 						{this.state.term.length < 4 ? <h3 className = "text-xs text-red-500">characters must be a least 4 letters</h3>: ''}
 					</form>
